@@ -39,6 +39,16 @@ export class ERC721Service extends BaseService {
       return await this.sendTransactionAndConfirm(sendTxData, privateKey);
     }
 
+    async unListNFT(tokenId: number, privateKey: string): Promise<ResponseSendTransaction> {
+      const callData =  this.nftContract.unListERC721Data(tokenId);
+      const sendTxData = {
+        address: this.nftContract.getContractAddress(),
+        calldata: callData,
+        value: '0'
+      };
+      return await this.sendTransactionAndConfirm(sendTxData, privateKey);
+    }
+
     async getPastEvents(eventName: string, blocks: [number, number])  {
       return await this.nftContract.getPastEvents(eventName, blocks[0], blocks[1]);
     }

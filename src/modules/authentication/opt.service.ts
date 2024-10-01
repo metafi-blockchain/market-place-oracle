@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 
 import * as speakeasy from 'speakeasy';
-import { TOKENS } from "src/blockchains/utils/app.enums";
+import { TOKENS } from "src/utils/app.enums";
 // Load the private key
 
 

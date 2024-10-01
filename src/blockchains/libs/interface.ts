@@ -46,6 +46,3 @@ export type UnListingParam = {
     nftIds: number[]
 }
 
-export interface EventStrategy {
-    handleEvent(event: any): Promise<void>;
-}

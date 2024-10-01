@@ -29,8 +29,8 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
 
     console.log("JwtAuthGuard running");
 
-    const PathFile = this.jwtConfigService.get('JTW_PUBLIC_PATH_FILE');
-    const publicKey = fs.readFileSync(PathFile, 'utf-8')
+    const pathFile = this.jwtConfigService.get('JTW_PUBLIC_PATH_FILE');
+    const publicKey = fs.readFileSync(pathFile, 'utf-8')
 
     const req = context.switchToHttp().getRequest();
     // console.log(req.headers)

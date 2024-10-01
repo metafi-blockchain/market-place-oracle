@@ -1,9 +1,7 @@
 import { BadRequestException, Body, Controller, Get, NotFoundException, Param, Post, Query } from '@nestjs/common';
 import { NftsService } from './nfts.service';
 import { NFT_STATUS } from './nft.entity';
-import { Web3 } from 'web3'
 import { ApiOkResponse, ApiOperation, ApiParam, ApiQuery, ApiTags } from '@nestjs/swagger';
-import e from 'express';
 import { isAddress } from 'ethers';
 
 @ApiTags('nfts')

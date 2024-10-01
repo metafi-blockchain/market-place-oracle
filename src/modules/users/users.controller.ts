@@ -34,26 +34,24 @@ export class UsersController {
 
   constructor(private userService: UsersService, 
 
-    private readonly configService: ConfigService
+    private readonly configService: ConfigService,
+
     ) { 
     };
 
   // @UseInterceptors(CurrentUserInterceptor) //config one route
-  @Serialize(UserDto)
-  @UseGuards(AdminGuard)
-  @Get('/whoami')
-  async whoAmI(@Request() request: any) {
-    // console.log("whoami");
 
-    return request.user
-  }
 
 
   @Serialize(UserDto) //use default interceptor
   @Get('/me')
-  async findUserBuyId(@Req() req) {
+  async findUserBuyId(@Req() req: any) {
     return req.user
   }
+
+  
+
+
 
  
 

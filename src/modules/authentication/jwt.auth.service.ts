@@ -3,7 +3,7 @@ import { JwtService } from '@nestjs/jwt';
 import { UsersService } from 'src/modules/users/users.service';
 import {  scrypt as _scrypt } from 'crypto';
 import { UserDto } from 'src/modules/users/dtos/user.dto';
-import { TOKENS } from 'src/blockchains/utils/app.enums';
+import { TOKENS } from 'src/utils/app.enums';
 import { JwtConfigService } from './jwt.config.service';
 import { comparePassword, hashPassword } from 'src/utils';
 

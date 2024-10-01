@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { JwtModuleOptions, JwtOptionsFactory } from '@nestjs/jwt';
-import { TOKENS } from 'src/blockchains/utils/app.enums';
+import { TOKENS } from 'src/utils/app.enums';
 import * as fs from 'fs';
 import { ConfigService } from '@nestjs/config';
 
