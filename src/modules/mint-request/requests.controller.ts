@@ -5,7 +5,6 @@ import { CreateNftTypeDto, ListNftsDto, MintNftsDo, MintNftDto, SetNftSupport, L
 import { NftTypesService } from '../nft-types/nft-types.service';
 import { NftsService } from '../nfts/nfts.service';
 import { MINT_STATUS, NFT, NFT_STATUS } from '../nfts/nft.entity';
-import { AuthGuard } from '@nestjs/passport';
 import { AdminGuard } from 'src/guards/admin.auth.guard';
 import { JwtAuthGuard } from 'src/guards/jwt.auth.guard';
 import { ApiBearerAuth, ApiResponse } from '@nestjs/swagger';

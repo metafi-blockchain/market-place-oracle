@@ -72,18 +72,18 @@ export class UsersController {
   }
 
 
-  @Post('logout')
-  async logOut(@Req() req) {
+  // @Post('logout')
+  // async logOut(@Req() req) {
 
-    try {
-      await this.userService.logout(req.user);
+  //   try {
+  //     await this.userService.logout(req.user);
 
-      return true
+  //     return true
       
-    } catch (error) {
-        console.log(error);
+  //   } catch (error) {
+  //       console.log(error);
         
-    } 
-    return false;
-  }
+  //   } 
+  //   return false;
+  // }
 }
